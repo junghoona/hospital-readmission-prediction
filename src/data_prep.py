@@ -88,7 +88,7 @@ def engineer_features(df):
 
     # ICD-9 grouping into clinical categories
     for col in ["diag_1", "diag_2", "diag_3"]:
-        df[f"{col}_category"] = df[col].apply(_icd9_category)
+        df[col] = df[col].apply(_icd9_category)
     df = df.drop(columns=["diag_1", "diag_2", "diag_3"])
 
     # age midpoint
