@@ -1,0 +1,17 @@
+{
+  "n_columns": 39,
+  "n_drifted_columns": 6,
+  "share_drifted": 0.1538,
+  "dataset_drift": false,
+  "drifted_columns": [
+    "age",
+    "time_in_hospital",
+    "num_medications",
+    "service_utilization",
+    "number_inpatient",
+    "diag_1"
+  ],
+  "prediction_psi": 0.2575,
+  "ref_mean_score": 0.4702,
+  "cur_mean_score": 0.5311
+}

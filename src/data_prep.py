@@ -86,10 +86,11 @@ def engineer_features(df):
     medical_specialty to top-k + 'Other'. Return the engineered frame."""
     df = df.copy()
 
-    # ICD-9 grouping into clinical categories
+    # ICD-9 grouping into clinical categories.
+    # Assign in place: src/generate_current_batch.py and src/monitoring.py
+    # address these columns as diag_1/2/3, not diag_*_category.
     for col in ["diag_1", "diag_2", "diag_3"]:
         df[col] = df[col].apply(_icd9_category)
-    df = df.drop(columns=["diag_1", "diag_2", "diag_3"])
 
     # age midpoint
     bounds = df["age"].str.extract(r"\[(\d+)-(\d+)\)").astype(float)
