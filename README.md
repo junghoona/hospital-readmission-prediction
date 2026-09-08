@@ -1,6 +1,6 @@
 # Hospital Readmission Prediction — MLOps Pipeline
 
-This project was completed as an MLOps Capstone project for UpGrad. A guided healthcare MLOps pipeline predicting 30-day readmission on the Diabetes 130-US Hospitals dataset (1999–2008). Covers data preparation, model development with MLflow tracking, and operations: a FastAPI inference service, containerisation, CI, drift monitoring, automated retraining and governance.
+This project was completed as an MLOps Capstone project for UpGrad. This is a guided healthcare MLOps pipeline predicting 30-day readmission on the Diabetes 130-US Hospitals dataset (1999–2008). The project covers data preparation, model development with MLflow tracking, and operations: a FastAPI inference service, containerisation, CI, drift monitoring, automated retraining and governance.
 
 ---
 
@@ -8,9 +8,11 @@ This project was completed as an MLOps Capstone project for UpGrad. A guided hea
 
 ```bash
 # 1. environment (Python 3.12 — see "Why 3.12" below)
-uv venv --python 3.12 .venv          # or: python3.12 -m venv .venv
+uv venv --python 3.12
 source .venv/bin/activate
-pip install -r requirements.txt
+uv pip install -r requirements.txt     # or: python -m pip install -r requirements.txt
+python -c "import numpy, sklearn, xgboost; print(numpy.__version__)"    # verify installed package version
+
 brew install libomp                  # macOS only; XGBoost needs OpenMP at runtime
 
 # 2. verify
@@ -141,7 +143,7 @@ registry history.
 Inspect runs in the UI:
 
 ```bash
-mlflow ui --backend-store-uri sqlite:///mlflow.db     # http://localhost:5000
+mlflow ui --backend-store-uri sqlite:///mlflow.db     # http://127.0.0.1:5000
 ```
 
 ### Stage 4 · `app.py`, `src/monitoring.py`, `src/retrain.py` + `Operations_Monitoring_and_Evidence.ipynb`
