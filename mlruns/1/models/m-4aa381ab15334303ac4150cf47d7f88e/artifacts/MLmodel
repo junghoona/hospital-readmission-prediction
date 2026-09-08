@@ -1,0 +1,61 @@
+artifact_path: /Users/junghoona/Projects/hospital-readmission-prediction/mlruns/1/models/m-4aa381ab15334303ac4150cf47d7f88e/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.14
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 3.1.4
+model_id: m-4aa381ab15334303ac4150cf47d7f88e
+model_size_bytes: 683203
+model_uuid: m-4aa381ab15334303ac4150cf47d7f88e
+prompts: null
+run_id: f5efeed1910b44778020cba1b3f327a9
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "string", "name": "race", "required": true}, {"type": "string",
+    "name": "gender", "required": true}, {"type": "double", "name": "age", "required":
+    true}, {"type": "long", "name": "admission_type_id", "required": true}, {"type":
+    "long", "name": "discharge_disposition_id", "required": true}, {"type": "long",
+    "name": "admission_source_id", "required": true}, {"type": "long", "name": "time_in_hospital",
+    "required": true}, {"type": "string", "name": "medical_specialty", "required":
+    true}, {"type": "long", "name": "num_lab_procedures", "required": true}, {"type":
+    "long", "name": "num_procedures", "required": true}, {"type": "long", "name":
+    "num_medications", "required": true}, {"type": "long", "name": "number_outpatient",
+    "required": true}, {"type": "long", "name": "number_emergency", "required": true},
+    {"type": "long", "name": "number_inpatient", "required": true}, {"type": "string",
+    "name": "diag_1", "required": true}, {"type": "string", "name": "diag_2", "required":
+    true}, {"type": "string", "name": "diag_3", "required": true}, {"type": "long",
+    "name": "number_diagnoses", "required": true}, {"type": "string", "name": "max_glu_serum",
+    "required": false}, {"type": "string", "name": "A1Cresult", "required": false},
+    {"type": "string", "name": "metformin", "required": true}, {"type": "string",
+    "name": "repaglinide", "required": true}, {"type": "string", "name": "nateglinide",
+    "required": true}, {"type": "string", "name": "chlorpropamide", "required": true},
+    {"type": "string", "name": "glimepiride", "required": true}, {"type": "string",
+    "name": "glipizide", "required": true}, {"type": "string", "name": "glyburide",
+    "required": true}, {"type": "string", "name": "pioglitazone", "required": true},
+    {"type": "string", "name": "rosiglitazone", "required": true}, {"type": "string",
+    "name": "acarbose", "required": true}, {"type": "string", "name": "miglitol",
+    "required": true}, {"type": "string", "name": "tolazamide", "required": true},
+    {"type": "string", "name": "insulin", "required": true}, {"type": "string", "name":
+    "glyburide-metformin", "required": true}, {"type": "string", "name": "glipizide-metformin",
+    "required": true}, {"type": "string", "name": "change", "required": true}, {"type":
+    "string", "name": "diabetesMed", "required": true}, {"type": "long", "name": "service_utilization",
+    "required": true}, {"type": "long", "name": "num_med_changes", "required": true}]'
+  outputs: '[{"type": "long", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-09-08 15:58:13.171069'

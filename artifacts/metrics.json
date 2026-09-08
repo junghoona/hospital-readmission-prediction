@@ -1,6 +1,6 @@
 {
   "best_model": "logistic_regression",
-  "version": 3,
+  "version": 10,
   "validation": {
     "roc_auc": 0.6539,
     "pr_auc": 0.1708,
