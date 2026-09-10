@@ -276,18 +276,3 @@ Operations_Monitoring_and_Evidence.ipynb  Stage 4
 ```
 
 ---
-
-## File ownership (what to change vs leave alone)
-
-- **Provided — no modification expected:** `config.py`, `requirements.txt`,
-  `Dockerfile`, `tests/`, `src/evaluate.py`, `src/generate_current_batch.py`.
-- **You build:** the 3 notebooks; `src/data_prep.py`, `src/train.py`,
-  `src/monitoring.py`, `src/retrain.py`, `app.py`, `.github/workflows/ci.yml`;
-  and the MLOps report.
-
-Each notebook stage opens with a Markdown sub-task checklist — every sub-task
-shows its ID and marks (e.g. `2.1.1 — Missing value handling [2]`) so you can
-see exactly what each mark rewards; the code cells below carry short `# TODO`
-pointers.
-
----
